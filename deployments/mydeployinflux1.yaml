@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: mydeployinflux1
+  name: mydeployinflux1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mydeployinflux1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: mydeployinflux1
+    spec:
+      containers:
+      - image: influxdb:1.8
+        name: influxdb
+        resources: {}
+status: {}

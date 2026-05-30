@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: testinflux
+  name: testinflux
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: testinflux
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: testinflux
+    spec:
+      containers:
+      - image: influxdb
+        name: influxdb
+        resources: {}
+status: {}

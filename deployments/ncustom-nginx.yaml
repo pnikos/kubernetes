@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: ncustom-nginx
+  name: ncustom-nginx
+spec:
+  containers:
+  - image: nginx
+    name: ncustom-nginx
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
+

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nikos-nginx
+  name: nikos-nginx
+spec:
+  containers:
+  - image: nginx
+    name: nikos-nginx
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
