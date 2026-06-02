@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: mealy
-  name: mealy
+    app: mealie
+  name: mealie
   namespace: mealie
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mealy
+      app: mealie
   strategy: {}
   template:
     metadata:
       labels:
-        app: mealy
+        app: mealie
     spec:
       containers:
       - image: ghcr.io/mealie-recipes/mealie:v1.2.0
