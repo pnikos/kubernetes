@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-server
+  labels:
+    app: web-server
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: web-server
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: web-server
+    spec:
+      containers:
+      - image: pyserver:1.0
+        name: nikos-pyserver
+        resources: {}
+status: {}
+
