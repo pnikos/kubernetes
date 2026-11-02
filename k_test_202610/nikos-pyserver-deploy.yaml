@@ -20,7 +20,7 @@ spec:
         app: web-server
     spec:
       containers:
-      - image: pyserver:1.0
+      - image: pyserver:1.1
         name: nikos-pyserver
         resources: {}
 status: {}
